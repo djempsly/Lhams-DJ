@@ -1,3 +1,4 @@
+import React from 'react'
 import { BrowserRouter, useRoutes } from 'react-router-dom'
 import { ArticleProvider } from '../../Context'
 import Home from '../Home'
@@ -10,6 +11,8 @@ import NavBar from '../../Component/NavBar'
 import Electrinic from '../Electronic'
 import Costmetic from '../Cosmetic'
 import { CheckOutSideMenu } from '../../Component/CheckOutSidemenu'
+import { Modal } from '../../Component/Modal'
+import { Oferta } from '../../Component/Oferta'
 
 import '../../App.css'
 
@@ -28,10 +31,19 @@ const AppRoutes = ()=>{
   return routes
 }
 
+
+
 function App() {
+  const [openModal, setOpenModal] = React.useState(true)
 
   return (
     <>
+    {openModal && (
+    <Modal>
+      <Oferta setOpenModal ={setOpenModal} />
+    </Modal>
+
+  )}
     <ArticleProvider>
     <BrowserRouter>
        <AppRoutes />

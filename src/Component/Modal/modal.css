@@ -1,0 +1,11 @@
+.modal{
+    width: 75%;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:640px){
+    .modal{
+        width: 90%;
+    }
+}

@@ -9,7 +9,7 @@ const NavBar = ()=>{
    const ActiveStyle = 'underline underline-offset-4 bg-blue-100'
    return(
       <>
-      <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-7 px-7 h-3'>
+      <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-7 px-7 h-3 bg-blue-950'>
       <ul className= 'flex items-center gap-4'>
           <li>
              <NavLink 
@@ -40,7 +40,7 @@ const NavBar = ()=>{
           </li>
       </ul>
 
-      <input placeholder="Busca en tu buscador" />
+      <input className='w-max items-center border-blue-950' placeholder="Busca en tu buscador" />
 
       <ul className='flex items-center gap-4'>
           <div className='text-black/60'>

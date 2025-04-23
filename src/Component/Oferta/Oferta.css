@@ -1,0 +1,47 @@
+.component-container{
+    width: 70%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+    /* background-color: rgb(200, 149, 128); */
+    z-index: 1;
+    position: fixed;
+     top: 60px;
+    left: 210px;
+    border: 3px solid rgb(0, 0, 0);
+  
+     
+}
+
+.imagen-oferta{
+    width: 100%;
+    height: auto;
+}
+
+.cierra-oferta{
+    z-index: 1;
+    position: fixed;
+    right: 272px;
+    width: 30px;
+    height: 30px;
+    background: rgb(153, 146, 146);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cierra-oferta:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+.cierra{
+    color: green;
+    font-size: 25px;
+}
+
+.cierra:hover{
+    color: red;
+}

@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../../Component/Layout"
 import Card from "../../Component/Card"
 import { ProductDetail } from "../../Component/ProductDetail"
+import { Sliders } from "../../Component/Slider"
 
 
 function Home() {
@@ -16,6 +17,8 @@ function Home() {
 
   return (
     <> 
+     <Sliders />
+
      <Layout>
     <div className="grid grid-cols-4 gap-4 w-full max-w-screen-lg mr-52">
     {
