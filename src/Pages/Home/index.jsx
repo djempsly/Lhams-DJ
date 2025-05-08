@@ -3,6 +3,7 @@ import Layout from "../../Component/Layout"
 import Card from "../../Component/Card"
 import { ProductDetail } from "../../Component/ProductDetail"
 import { Sliders } from "../../Component/Slider"
+import { Footer } from "../../Component/Footer"
 
 
 function Home() {
@@ -10,10 +11,18 @@ function Home() {
 
   React.useEffect(()=>{
     fetch('https://api.escuelajs.co/api/v1/products')
-    .then(res=>res.json())
-    .then(data=>setItems(data))
+      .then(res=>res.json())
+      .then(data=>setItems(data))
+    // fetch('http://localhost:3000/productos')
 
   },[])
+
+  // fetch('http://localhost:3000/productos')
+  // .then(res => res.json())
+  // .then(data =>setItem {
+  //   console.log(data); // mostrar productos
+  // });
+
 
   return (
     <> 
@@ -30,6 +39,9 @@ function Home() {
     </div>
     <ProductDetail />
   </Layout>
+
+  <Footer />
+
 
 
   

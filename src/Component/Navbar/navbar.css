@@ -1,0 +1,181 @@
+.nav{
+    padding: 0;
+    margin: 10px 0 2px 0;
+    width: 100%;
+    background-color: rgb(3, 3, 84);
+    height: 44px;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav-izquierdo{
+       display: flex;
+      gap: 20px;
+      position: absolute;
+      left: 400px;
+      z-index: 1;
+    }
+    
+    .nav-izquierdo li {
+    list-style: none; 
+    padding: 6px;
+  }
+  
+  .nav-izquierdo li:hover{
+    background-color: orange;
+  }
+  
+  .nav-izquierdo li a{
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  }
+  
+  .nav-izquierdo li a:hover{
+    color: black;
+  }
+  
+  .navbar-derecho{
+    display: flex;
+    gap: 10px;
+  }
+  
+  .navbar-derecho li{
+    list-style: none;
+    padding: 10px;
+  }
+  
+  .navbar-derecho li:hover{
+  background-color: orange;
+  }
+  
+  .navbar-derecho li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .select-product-container{
+    background-color: rgb(3, 3, 84);
+    color: white;
+  }
+  
+  /* Aqui Empieza los estilos de los sub-menus*/
+  .nav-izquierdo li ul{
+    position: absolute;
+    display: none;
+  }
+  
+  .nav-izquierdo li:hover > ul{
+    display: block;
+    width: 60%;
+    background-color: rgb(5, 5, 153);
+    position: absolute;
+    top: 42px;
+    margin-bottom: 6px;
+    left: 115px;
+    padding-left: 0;
+  }
+  
+  .nav-izquierdo li ul li {
+    position: relative;
+  }
+  
+  .nav-izquierdo ul li ul li a{
+    display: block;
+    position: relative;
+    color: aquamarine;
+  }
+  
+  /*Aqui empieza el menu mobile*/
+  
+  .div-menu-mobile{
+    display: none;
+  }
+  
+  .menu-mobile ul {
+    display: flex;
+    padding: 10px;
+    margin: 0px 10px 0 10px;
+    list-style: none;
+    text-decoration: none;
+    
+  }
+  .menu-mobile li a{
+    padding: 8px;
+    color: rgb(208, 202, 224);
+  
+  }
+  
+  .menu-mobile li a:hover{
+    border: 2px solid rgb(181, 107, 181);
+    border-radius: 15px;
+  }
+  
+  .menu-mobile ul li a{
+    text-decoration: none;
+  }
+  .menu-mobile  li ul{
+   position: absolute;
+   display: none;
+  } 
+  
+  .menu-mobile li:hover > ul{
+    display: block;
+  }   
+  .menu-mobile  li ul li {  
+   position: relative;
+  
+  } 
+  
+  .menu-mobile ul li ul li a{
+    display: block;
+    width: 70%;
+    position: relative;
+    color: blue;
+    margin-left: -20px;
+    background-color: rgb(94, 27, 150);
+  }
+  
+  .menu-imagen{
+    width: 100px;
+    position: relative;
+    display: none;
+    cursor: pointer;
+    color: rgb(156, 36, 36);
+  }
+  
+  
+  @media (max-width:640px){
+    .nav{
+      height: 44px;
+    }
+   
+    .nav-izquierdo{
+      left: 60px;
+      gap: 5px;
+    }
+      .nav-izquierdo li {
+      list-style: none; 
+      padding: 5px;
+    
+    }
+    
+    .nav-izquierdo li:hover{
+      background-color: orange;
+    }
+    
+    .nav-izquierdo li a{
+    color: rgb(138, 17, 17);
+    text-decoration: none;
+    font-size: 15px;
+    
+    }
+    
+    .nav-izquierdo li a:hover{
+      color: black;
+    }
+  
+  }

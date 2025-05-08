@@ -6,6 +6,7 @@ import MyOrders from '../MyOrders'
 import MyOrder from '../MyOrder'
 import MyAccount from '../MyAccount'
 import SignIn from '../SignIn'
+import SignUp from '../SignUp'
 import NotFound from '../NotFound'
 import NavBar from '../../Component/NavBar'
 import Electrinic from '../Electronic'
@@ -13,6 +14,8 @@ import Costmetic from '../Cosmetic'
 import { CheckOutSideMenu } from '../../Component/CheckOutSidemenu'
 import { Modal } from '../../Component/Modal'
 import { Oferta } from '../../Component/Oferta'
+import ErrorBoundary from '../../errorBundaries'
+
 
 import '../../App.css'
 
@@ -23,6 +26,7 @@ const AppRoutes = ()=>{
     {path:"/my-order", element: <MyOrder />},
     {path:"/my-account", element: <MyAccount />},
     {path:"/sign-in", element: <SignIn />},
+    {path:"/signup", element: <SignUp />},
     {path:"/my-electronic", element: <Electrinic />},
     {path:"/my-cosmetic", element: <Costmetic />},
     {path:"/*", element: <NotFound />},
@@ -42,8 +46,11 @@ function App() {
     <Modal>
       <Oferta setOpenModal ={setOpenModal} />
     </Modal>
+    )}
+<ErrorBoundary>
 
-  )}
+
+
     <ArticleProvider>
     <BrowserRouter>
        <AppRoutes />
@@ -51,8 +58,8 @@ function App() {
       <CheckOutSideMenu />
       </BrowserRouter>
     </ArticleProvider>
-   
 
+    </ErrorBoundary>
     </>
   )
 }
